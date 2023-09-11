@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Route, useLocation, Routes, Navigate } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -44,6 +44,10 @@ function App() {
     },
     []
   );
+
+  useEffect(() => {
+    document.title = "Kishan M";
+  });
 
   return (
     <div className="App">
