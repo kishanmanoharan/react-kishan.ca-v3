@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
-import "./KishanManoharanResume-2023.3.pdf";
+import "./KishanManoharanResume-2024.pdf";
 import randomColor from "randomcolor";
 
 function randColor() {
@@ -9,10 +9,10 @@ function randColor() {
 
 export const Resume = () => {
   const langs = [
+    "TypeScript",
     "HTML",
     "CSS",
     "JavaScript",
-    "TypeScript",
     "Java",
     "C#",
     "Python",
@@ -26,19 +26,19 @@ export const Resume = () => {
     "GraphQL",
     "NestJS",
   ];
-  const tools = ["Visual Studio Code", "Git", "Powershell", "Azure"];
+  const tools = ["PostgreSQL", "MongoDB", "Visual Studio Code", "Git", "Powershell", "Azure Cloud", "Google Cloud Platform"];
 
   return (
     <>
       <Container fluid className="App-header">
-        <Container className="title title-pad-1">
+        <Container className="title title-pad-0">
           <Row>
             <h2>Resume</h2>
             <h6>
               Take a look below for a quick run-down, or download my full resume
             </h6>
             <Col>
-              <Button href="./KishanManoharanResume-2023.3.pdf" target="_blank">
+              <Button href="./KishanManoharanResume-2024.pdf" target="_blank">
                 Open Resume
               </Button>
             </Col>
@@ -48,7 +48,26 @@ export const Resume = () => {
           <Row>
             <Col xl={4} className="text-start p-3">
               <h2 className="mb-4">Work Experience</h2>
-              <div className="p-3 grey">
+              <div className="p-3 mt-3 grey">
+                <h4>
+                <a
+                    href="https://www.bridgenext.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <strong>BridgeNext</strong>
+                  </a>
+                </h4>
+                <h5>October 2023 - Present</h5>
+                <h6>
+                  <strong>Full Stack Developer</strong>
+                </h6>
+                <h6>
+                Tasked as a Fullstack Developer adept at bolstering the functionality and efficiency of a logistics company's flagship microservices. Proficient in ReactJS for frontend and NodeJS with PostgreSQL for backend development, with a focus on bug resolution, feature enhancements, and seamless deployment. Skilled in client interaction to align software improvements with business objectives.
+
+                </h6>
+              </div>
+              <div className="p-3 mt-3 grey">
                 <h4>
                   <a
                     href="https://home.kpmg/ca"
@@ -69,44 +88,9 @@ export const Resume = () => {
                   data analytics.
                 </h6>
               </div>
-              <div className="p-3 mt-3 grey">
-                <h4>
-                  <strong>Staples Canada</strong>
-                </h4>
-                <h5>August 2020 - April 2022</h5>
-                <h6>
-                  <strong>Technology Associate/Technician</strong>
-                </h6>
-                <h6>
-                  Assisted customers with technical issues and needs. Suggested
-                  items and solutions based on budget, use-cases, and
-                  reliability that are best catered to the customer.
-                </h6>
-              </div>
             </Col>
             <Col xl={4} className="text-start p-3">
-              <h2 className="mb-4">Education</h2>
-              <div className="p-3 grey">
-                <h4>
-                  <strong>George Brown College</strong>
-                </h4>
-                <h5>September 2019 - April 2022</h5>
-                <h6>
-                  <strong>Computer Program Analyst - T177</strong>
-                </h6>
-                <h6>
-                  This program excels at giving students the experience and
-                  skills needed for a wide variety of software-based careers.
-                  This includes experience in web, open-source, Unix, and
-                  object-oriented languages.
-                </h6>
-                <div className="progress-bar-container">
-                  <div className="progress-bar"></div>
-                </div>
-              </div>
-            </Col>
-            <Col xl={4} className="text-start p-3">
-              <h2 className="mb-4">Skills</h2>
+              <h2 className="mb-4">Knowledge</h2>
               <Row>
                 <Col>
                   <div className="p-3 grey">
@@ -127,7 +111,7 @@ export const Resume = () => {
                       </div>
                     ))}
                     <h4 className="pt-3">
-                      <strong>Tools</strong>
+                      <strong>Others</strong>
                     </h4>
                     {tools.map((tools) => (
                       <div className="tag" style={{ color: randColor() }}>
@@ -138,6 +122,25 @@ export const Resume = () => {
                 </Col>
               </Row>
             </Col>
+            <Col xl={4} className="text-start p-3">
+              <h2 className="mb-4">Education</h2>
+              <div className="p-3 grey">
+                <h4>
+                  <strong>George Brown College</strong>
+                </h4>
+                <h5>September 2019 - April 2022</h5>
+                <h6>
+                  <strong>Computer Program Analyst - T177</strong>
+                </h6>
+                <h6>
+                  This program excels at giving students the experience and
+                  skills needed for a wide variety of software-based careers.
+                  This includes experience in web, open-source, Unix, and
+                  object-oriented languages.
+                </h6>
+              </div>
+            </Col>
+            
           </Row>
         </Container>
       </Container>

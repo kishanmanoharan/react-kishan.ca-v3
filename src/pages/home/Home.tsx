@@ -27,6 +27,13 @@ export const Home = () => {
                 viewBox="0 0 753 194"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                transition={{
+                  duration: 3,
+                  ease: "easeInOut",
+                  times: [0, 0.2, 0.5, 0.8, 1],
+                  repeat: Infinity,
+                  repeatDelay: 2,
+                }}
               >
                 <motion.path
                   d="M218 9C219.371 24.0854 228.887 40.9816 233.713 55.3275C242.161 80.4348 251.268 106.096 261.889 130.373C269.855 148.579 277.606 165.872 283.834 184.557"
