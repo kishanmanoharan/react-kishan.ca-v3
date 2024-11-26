@@ -26,7 +26,15 @@ export const Resume = () => {
     "GraphQL",
     "NestJS",
   ];
-  const tools = ["PostgreSQL", "MongoDB", "Visual Studio Code", "Git", "Powershell", "Azure Cloud", "Google Cloud Platform"];
+  const tools = [
+    "PostgreSQL",
+    "MongoDB",
+    "Visual Studio Code",
+    "Git",
+    "Powershell",
+    "Azure Cloud",
+    "Google Cloud Platform",
+  ];
 
   return (
     <>
@@ -50,7 +58,7 @@ export const Resume = () => {
               <h2 className="mb-4">Work Experience</h2>
               <div className="p-3 mt-3 grey">
                 <h4>
-                <a
+                  <a
                     href="https://www.bridgenext.com/"
                     target="_blank"
                     rel="noreferrer"
@@ -58,13 +66,18 @@ export const Resume = () => {
                     <strong>BridgeNext</strong>
                   </a>
                 </h4>
-                <h5>October 2023 - Present</h5>
+                <h5>October 2023 - November 2024</h5>
                 <h6>
                   <strong>Full Stack Developer</strong>
                 </h6>
                 <h6>
-                Tasked as a Fullstack Developer adept at bolstering the functionality and efficiency of a logistics company's flagship microservices. Proficient in ReactJS for frontend and NodeJS with PostgreSQL for backend development, with a focus on bug resolution, feature enhancements, and seamless deployment. Skilled in client interaction to align software improvements with business objectives.
-
+                  Tasked as a Fullstack Developer adept at bolstering the
+                  functionality and efficiency of a logistics company's flagship
+                  microservices. Proficient in ReactJS for frontend and NodeJS
+                  with PostgreSQL for backend development, with a focus on bug
+                  resolution, feature enhancements, and seamless deployment.
+                  Skilled in client interaction to align software improvements
+                  with business objectives.
                 </h6>
               </div>
               <div className="p-3 mt-3 grey">
@@ -140,7 +153,6 @@ export const Resume = () => {
                 </h6>
               </div>
             </Col>
-            
           </Row>
         </Container>
       </Container>
