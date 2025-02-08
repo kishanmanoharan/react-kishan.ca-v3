@@ -62,7 +62,6 @@ export const Contact = () => {
                   <Form.Label>Name:</Form.Label>
                   <Form.Control
                     type="name"
-                    placeholder="Friendly contact exchange"
                     onChange={(e) => setname(e.target.value)}
                   />
                 </Form.Group>
@@ -72,7 +71,6 @@ export const Contact = () => {
                   <Form.Label>Email:</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="So I can get back to you"
                     onChange={(e) => setemail(e.target.value)}
                   />
                 </Form.Group>
@@ -82,7 +80,6 @@ export const Contact = () => {
                   <Form.Label>Reason:</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Why you are reaching out"
                     className="grey"
                     onChange={(e) => setreason(e.target.value)}
                   />
@@ -96,7 +93,6 @@ export const Contact = () => {
                   <Form.Control
                     as="textarea"
                     rows={2}
-                    placeholder="Throw in some details, the more the merrier!"
                     onChange={(e) => setdetails(e.target.value)}
                   />
                 </Form.Group>

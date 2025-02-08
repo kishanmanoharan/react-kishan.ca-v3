@@ -64,8 +64,15 @@ a {
   margin-top: 13vh;
 }
 .title-pad-2 {
-  margin-top: 22vh;
+  margin-top: 10vh;
 }
+
+@media screen and (min-width: 480px) {
+  .title-pad-2 {
+    margin-top: 22vh;
+  }
+}
+
 .title-pad-3 {
   margin-top: 30vh;
 }
@@ -104,7 +111,8 @@ a {
   background-color: #ffffff20 !important;
   color: #ffffff !important;
   margin: 1vh 1vw !important;
-  padding: 1vh 1vw !important;
+  /* padding: 1vh 1vw !important; */
+  padding: 12px !important;
 }
 
 .btn:hover {
@@ -214,4 +222,12 @@ a {
   font-size: 1rem;
   font-weight: 300;
   color: #fff;
+}
+
+.page-motion-style {
+  position: absolute;
+}
+
+.navbar-brand {
+  padding: 5px !important;
 }

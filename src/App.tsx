@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { Route, useLocation, Routes, Navigate } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import { useCallback } from "react";
 import Particles from "react-particles";
@@ -14,21 +13,93 @@ import Home from "./pages/home";
 import Projects from "./pages/projects";
 import Resume from "./pages/resume";
 import Contact from "./pages/contact";
+import { AnimatePresence, motion } from "framer-motion";
+
+const pageVariants = {
+  initial: {
+    opacity: 0,
+  },
+  in: {
+    opacity: 1,
+  },
+  out: {
+    opacity: 0,
+  },
+};
+
+const pageTransition = {
+  ease: "easeInOut",
+  duration: 0.3,
+};
 
 const Paths = () => {
   const location = useLocation();
   return (
-    <TransitionGroup>
-      <CSSTransition timeout={300} classNames="fade" key={location.key}>
-        <Routes location={location} key={location.key}>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </CSSTransition>
-    </TransitionGroup>
+    <AnimatePresence>
+      <Routes location={location} key={location.key}>
+        <Route
+          path="/"
+          element={
+            <motion.div
+              style={{ position: "absolute", width: "100vw" }}
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Home />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <motion.div
+              style={{ position: "absolute", width: "100vw" }}
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Projects />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <motion.div
+              style={{ position: "absolute", width: "100vw" }}
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Contact />
+            </motion.div>
+          }
+        />
+        <Route
+          path="/resume"
+          element={
+            <motion.div
+              style={{ position: "absolute", width: "98vw" }}
+              initial="initial"
+              animate="in"
+              exit="out"
+              variants={pageVariants}
+              transition={pageTransition}
+            >
+              <Resume />
+            </motion.div>
+          }
+        />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </AnimatePresence>
   );
 };
 
