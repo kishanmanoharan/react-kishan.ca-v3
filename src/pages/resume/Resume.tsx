@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Button, Row, Col } from "react-bootstrap";
-import "./KishanManoharanResume-2024.pdf";
+import "./KishanManoharanResume.pdf";
 import randomColor from "randomcolor";
 
 function randColor() {
@@ -46,7 +46,7 @@ export const Resume = () => {
               Take a look below for a quick run-down, or download my full resume
             </h6>
             <Col>
-              <Button href="./KishanManoharanResume-2024.pdf" target="_blank">
+              <Button href="./KishanManoharanResume.pdf" target="_blank">
                 Open Resume
               </Button>
             </Col>

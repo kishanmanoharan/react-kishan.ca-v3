@@ -56,7 +56,7 @@ export const KNavbar = () => {
             <PersonVcard size={24} />
           </a>
           <a
-            href="./KishanManoharanResume-2024.pdf"
+            href="./KishanManoharanResume.pdf"
             className="navbar-btn"
             target="_blank"
           >
